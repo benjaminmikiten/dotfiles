@@ -1,0 +1,7 @@
+bat
+neovim
+ranger
+tmux
+w3m
+wget
+zsh
