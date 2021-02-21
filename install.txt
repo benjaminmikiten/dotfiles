@@ -1,0 +1,35 @@
+# Install Homebrew
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Taps
+brew tap homebrew/cask-versions
+brew tap homebrew/cask-fonts
+
+# Install apps
+
+brew install --cask visual-studio-code iterm2 firefox firefox-developer-edition google-chrome google-chrome-canary discord slack pocket-casts 1password via spotify nordvpn
+
+# Install cli packages 
+brew install nvim tmux bat ranger 
+
+# Install fonts
+
+brew install font-fira-code font-fira-code-nerd-font
+
+# Install nvm
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# Install oh-my-tmux
+cd
+git clone https://github.com/gpakosz/.tmux.git
+ln -s -f .tmux/.tmux.conf
+cp .tmux/.tmux.conf.local .
+
+
+# show hidden files
+defaults write com.apple.Finder AppleShowAllFiles true
